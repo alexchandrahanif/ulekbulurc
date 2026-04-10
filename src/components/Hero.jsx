@@ -46,6 +46,30 @@ const Hero = () => {
 					</div>
 				</div>
 			</div>
+			{/* SCROLL INDICATOR */}
+
+			<div
+				onClick={() => {
+					window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+				}}
+				className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 cursor-pointer flex flex-col items-center">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					className="w-8 h-8 text-yellow-500 animate-bounce"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					strokeWidth="2">
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						d="M19 9l-7 7-7-7"
+					/>
+				</svg>
+				<span className="text-xs text-yellow-500 tracking-widest uppercase animate-pulse">
+					Scroll
+				</span>
+			</div>
 		</section>
 	);
 };
